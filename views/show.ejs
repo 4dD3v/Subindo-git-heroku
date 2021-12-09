@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio de cadastro</title>
+    <link rel="stylesheet" href="/views/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h2>Registros<h2></h2>
+    </header>
+    <center>
+    <section>
+        
+        <button><a href="/">Novo cadastro</a></button>
+        
+        <table border="1">
+            <thead>
+                <tr>
+                    <td>Nome</td>
+                    <td>Sobrenome</td>
+                    <td>Ações</td>
+                </tr>
+            </thead>
+            <tbody>
+                
+                <% crud.forEach(function(details) { %>
+                    <tr>
+                        <td>
+                            <%= details.name %>
+                        </td>
+                        <td>
+                            <%= details.surname %>
+                        </td>
+                        <td class="actions"><a href="/edit/<%= details._id %>"> <img src="/img/edit.svg"</a> - <a
+                                href="/delete/<%= details._id %>">></a>
+                        </td>
+
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+        
+    </section></center>
+    <footer>
+        <p>&copy; AdDev</p>
+
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

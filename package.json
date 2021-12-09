@@ -1,0 +1,19 @@
+{
+  "name": "projetobd",
+  "version": "1.0.0",
+  "description": "projeto para aprender CRUD em javascript com NodeJs, Express, Mongoose e MongoDb",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\ \" && exit 1\"",
+    "start": "nodemon server.js"
+  },
+  "author": "AD",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.3",
+    "nodemon": "^2.0.13",
+    "path": "^0.12.7"
+  }
+}
